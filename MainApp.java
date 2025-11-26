@@ -11,7 +11,12 @@ public class MainApp {
         while (true) {
             System.out.print(output);
             try {
-                return Integer.parseInt(input.nextLine());
+                int num = Integer.parseInt(input.nextLine());
+                if (num < 0) {
+                    System.out.println("InvalidInputException: The given integer input cannot be negative!");
+                } else {
+                    return num;
+                }
             } catch (Exception e) {
                 System.out.println("InvalidInputException: The given integer input is invalid!");
             }
@@ -21,7 +26,12 @@ public class MainApp {
         while (true) {
             System.out.print(output);
             try {
-                return Double.parseDouble(input.nextLine());
+                double num = Double.parseDouble(input.nextLine());
+                if (num < 0) {
+                    System.out.println("InvalidInputException: The given decimal input cannot be negative!");
+                } else {
+                    return num;
+                }
             } catch (Exception e) {
                 System.out.println("InvalidInputException: The given decimal input is invalid!");
             }
